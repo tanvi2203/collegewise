@@ -3,7 +3,7 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50">
 
       {/* Navbar */}
-      <nav className="bg-white border-b">
+      <nav className="bg-white border-b text-black">
         <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
 
           <h1 className="text-2xl font-bold text-blue-600">
@@ -33,29 +33,52 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section className="text-center py-28 px-6">
+      <section className="relative h-[520px] overflow-hidden">
 
-        <h2 className="text-5xl font-bold text-black">
-          Find the Right College for Your Future
-        </h2>
+        {/* Campus Image */}
+        <img
+          src="/campus image.png"
+          alt="College campus"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
-        <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
-          Search colleges, compare them and find the best option
-          for your education and career.
-        </p>
+        {/* Light Overlay */}
+        <div className="absolute inset-0 bg-white/70"></div>
 
-        <a
-          href="/colleges"
-          className="inline-block mt-10 bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700"
-        >
-          Explore Colleges
-        </a>
+
+        {/* Hero Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-8 h-full flex items-center">
+
+          <div className="max-w-2xl">
+
+            <h2 className="text-5xl md:text-6xl font-bold text-black leading-tight">
+              Find the Right College
+              <span className="block text-blue-600">
+                for Your Future
+              </span>
+            </h2>
+
+            <p className="mt-6 text-lg text-gray-700 max-w-xl leading-8">
+              Search colleges, compare them and find the best option
+              for your education and career.
+            </p>
+
+            <a
+              href="/colleges"
+              className="inline-block mt-8 bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700"
+            >
+              Explore Colleges →
+            </a>
+
+          </div>
+
+        </div>
 
       </section>
 
 
       {/* Features */}
-      <section className="max-w-7xl mx-auto px-8 pb-28">
+      <section className="max-w-7xl mx-auto px-8 py-16">
 
         <h2 className="text-3xl font-bold text-black text-center mb-10">
           What You Can Do
@@ -63,8 +86,14 @@ export default function Home() {
 
         <div className="grid gap-8 md:grid-cols-3">
 
+          {/* Search */}
           <div className="bg-white p-8 rounded-xl shadow-sm border">
-            <h3 className="text-xl font-bold text-black">
+
+            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
+              🔍
+            </div>
+
+            <h3 className="text-xl font-bold text-black mt-6">
               Search Colleges
             </h3>
 
@@ -78,11 +107,18 @@ export default function Home() {
             >
               Explore Colleges →
             </a>
+
           </div>
 
 
+          {/* Compare */}
           <div className="bg-white p-8 rounded-xl shadow-sm border">
-            <h3 className="text-xl font-bold text-black">
+
+            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-2xl">
+              ⚖️
+            </div>
+
+            <h3 className="text-xl font-bold text-black mt-6">
               Compare Colleges
             </h3>
 
@@ -96,11 +132,18 @@ export default function Home() {
             >
               Compare Colleges →
             </a>
+
           </div>
 
 
+          {/* Predictor */}
           <div className="bg-white p-8 rounded-xl shadow-sm border">
-            <h3 className="text-xl font-bold text-black">
+
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-2xl">
+              🎓
+            </div>
+
+            <h3 className="text-xl font-bold text-black mt-6">
               College Predictor
             </h3>
 
@@ -114,6 +157,7 @@ export default function Home() {
             >
               Try Predictor →
             </a>
+
           </div>
 
         </div>
@@ -123,9 +167,11 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-white border-t text-center py-8">
+
         <p className="text-gray-500">
           © 2026 CollegeWise
         </p>
+
       </footer>
 
     </main>
